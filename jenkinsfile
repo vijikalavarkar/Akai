@@ -1,0 +1,19 @@
+pipeline{
+    agent any
+    stages{
+        stage('hostname'){
+            steps{
+                sh '''
+                    hostname
+                '''
+            }
+        }
+        stage('server-details'){
+            steps{
+                sh '''
+                    uname -a
+                '''
+            }
+        }
+    }
+}
